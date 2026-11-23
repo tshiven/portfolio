@@ -338,12 +338,14 @@ figure.vid video{width:100%;height:auto;background:#000}
       <div>
         <h3>V2X and multi-sensor validation</h3>
         <p class="oneline">Undergraduate researcher building tools that check whether connected-vehicle sensor and V2X radio data can be trusted.</p>
-        <p class="stack">Python · ROS 2 · rosbag · V2X · Cohda MK6 · SDSM (SAE J3224) · UDP · Linux · LiDAR · camera · GPS</p>
+        <p class="stack">Python · ROS 2 · rosbag · V2X · Cohda MK6 · Jetson Thor · SDSM (SAE J3224) · TCP / UDP · Linux · LiDAR · camera · GPS</p>
         <ul>
           <li>Found a <span class="num">59.5-minute</span> clock mismatch and a repeating <span class="num">1-second</span> GPS timing glitch hidden in a <span class="num">4.6 GB</span> LiDAR, camera, and GPS recording (<span class="num">25,763</span> messages).</li>
           <li>Built a Python tool that checks V2X radio messages (SDSM, SAE J3224) and caught <span class="num">6/6</span> injected faults in simulation.</li>
           <li>Created a <span class="num">1,790</span>-message ROS 2 sensor-sharing test dataset with an automated validator (<span class="num">100%</span> pass, fully reproducible).</li>
+          <li>Connected an NVIDIA Jetson Thor to a Cohda MK6 V2X unit over Ethernet with a ROS 2 bridge (first reached the unit from a laptop over Wi-Fi and SSH). A 15-minute test sent <span class="num">9,001</span> messages with <span class="num">0</span> lost and a <span class="num">3.0 ms</span> mean round trip. Wired baseline only; over-the-air is next.</li>
         </ul>
+        <div class="links"><a href="https://github.com/tshiven/thor-cohda-mk6-ros2">Thor to MK6 bridge and latency test (Python, ROS 2)</a></div>
       </div>
     </div>
 
